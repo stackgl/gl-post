@@ -6,6 +6,8 @@
 
 Simple WebGL post-processing using some pieces from [stackgl](http://stack.gl/).
 
+**[check out the demo](http://stack.gl/gl-post)**.
+
 ## Usage
 
 [![NPM](https://nodei.co/npm/gl-post.png)](https://nodei.co/npm/gl-post/)
