@@ -1,0 +1,54 @@
+{
+  "name": "gl-post",
+  "version": "1.0.0",
+  "description": "Simple WebGL post-processing",
+  "main": "index.js",
+  "glslify": "post.vert",
+  "license": "MIT",
+  "scripts": {
+    "start": "beefy example/index.js:bundle.js --open -- -t glslify",
+    "bundle": "browserify -t glslify example/index.js -o bundle.js",
+    "test": "npm run test:chrome && npm run test:firefox",
+    "test:chrome": "browserify -t glslify test/smokestack.js | smokestack -b chrome | tap-spec",
+    "test:firefox": "browserify -t glslify test/smokestack.js | smokestack -b firefox | tap-spec"
+  },
+  "author": {
+    "name": "Hugh Kennedy",
+    "email": "hughskennedy@gmail.com",
+    "url": "http://hughsk.io/"
+  },
+  "dependencies": {
+    "a-big-triangle": "^1.0.0",
+    "gl-fbo": "^2.0.3"
+  },
+  "devDependencies": {
+    "bunny": "^1.0.1",
+    "canvas-fit": "^1.2.0",
+    "canvas-orbit-camera": "^1.0.1",
+    "canvas-pixels": "0.0.0",
+    "gl-context": "^0.1.1",
+    "gl-geometry": "^1.0.0",
+    "gl-mat4": "^1.0.1",
+    "glslify": "^1.6.0",
+    "normals": "^1.0.1",
+    "smokestack": "^2.0.0",
+    "tap-spec": "^2.1.0",
+    "tape": "^3.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stackgl/gl-post.git"
+  },
+  "keywords": [
+    "post-processing",
+    "postprocessing",
+    "distort",
+    "recolor",
+    "webgl",
+    "stackgl"
+  ],
+  "homepage": "https://github.com/stackgl/gl-post",
+  "bugs": {
+    "url": "https://github.com/stackgl/gl-post/issues"
+  }
+}
